@@ -8,3 +8,6 @@ disp('Finalizar.');
 y = getaudiodata(recObj);
 plot(y);
 %audiowrite('teste.wav', 96, 48100);
+
+[audioIn,fs] = audioread('teste.wav');
+[coeffs,delta,deltaDelta,loc] = mfcc(audioIn,fs);
